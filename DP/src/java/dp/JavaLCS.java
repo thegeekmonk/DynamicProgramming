@@ -15,7 +15,7 @@ public class JavaLCS {
 	{
 		int num = 0; 
 		
-		
+		int D[][] = new int[10][10];
 		
 		
 		
