@@ -20,6 +20,9 @@ public class JavaLCS {
 		for(int i = 0;i < 10;i++)
 			D[i][0] = 0;
 		
+		for(int j = 0;j < 10;j++)
+			D[j][0] = 0;
+		
 		
 		
 		return num;
