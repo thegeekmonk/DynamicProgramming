@@ -12,19 +12,21 @@ public class JavaLCS {
 		
 	public static int lcs(String str1,String str2)
 	{
-		int num = 0; 
-		
+		int num = 0; 		
 		int D[][] = new int[10][10];
 		
-		for(int i = 0;i < 10;i++)
+		int len1 = str1.length();
+		int len2 = str2.length();
+		
+		for(int i = 0;i < len1;i++)
 			D[i][0] = 0;
 		
-		for(int j = 0;j < 10;j++)
+		for(int j = 0;j < len2;j++)
 			D[j][0] = 0;
 		
-		for(int i = 0;i < 10;i++)
+		for(int i = 0;i < len1;i++)
 		{
-			for(int j = 0;j < 10;j++)
+			for(int j = 0;j < len2;j++)
 			{
 				if(str1.charAt(i) == str2.charAt(j))
 					if(i == 0 || j == 0)
