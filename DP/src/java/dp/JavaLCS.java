@@ -23,7 +23,14 @@ public class JavaLCS {
 		for(int j = 0;j < 10;j++)
 			D[j][0] = 0;
 		
-		
+		for(int i = 0;i < 10;i++)
+		{
+			for(int j = 0;j < 10;j++)
+			{
+				if(str1.charAt(i) == str2.charAt(j))
+					D[i][j] = D[i-1][j-1] + 1;
+			}
+		}
 		
 		return num;
 	}
