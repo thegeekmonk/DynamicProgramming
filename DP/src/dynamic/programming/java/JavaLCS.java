@@ -12,47 +12,44 @@ public class JavaLCS {
 		
 	public static int lcs(String str1,String str2)
 	{
-		int num = 0; 		
+		//int num = 0; 		
 		int D[][] = new int[10][10];
 		
 		int len1 = str1.length();
 		int len2 = str2.length();
 		
-		for(int i = 0;i < len1;i++)
+		for(int i = 0;i <= len1;i++)
 			D[i][0] = 0;
 		
-		for(int j = 0;j < len2;j++)
+		for(int j = 0;j <= len2;j++)
 			D[j][0] = 0;
 		
-		for(int i = 0;i < len1;i++)
+		for(int i = 1;i <= len1;i++)
 		{
-			for(int j = 0;j < len2;j++)
+			for(int j = 1;j <= len2;j++)
 			{
 				if(str1.charAt(i) == str2.charAt(j))
-					if(i == 0 || j == 0)
-						D[i][j] = 1;
-					else
-					    D[i][j] = D[i-1][j-1] + 1;
+					D[i][j] = D[i-1][j-1] + 1;
 				else
 				{   
-					if(i == 0 || j == 0)
-						D[i][j] = 0;
-					else
+//					if(i == 0 || j == 0)
+//						D[i][j] = 0;
+//					else
 					   D[i][j] = max(D[i-1][j],D[i][j-1]);
 				}
 					
 			}
 		}
 		
-		return num;
+		return D[len1][len2];
 	}
 	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
           
-		String str1 = "ABCBDAB";
-		String str2 = "BDCABC";
+		String str1 = "0ABCBDAB";
+		String str2 = "0BDCABC";
 				
 		System.out.println("LCS of given two string is : "+lcs(str1,str2));
 		
