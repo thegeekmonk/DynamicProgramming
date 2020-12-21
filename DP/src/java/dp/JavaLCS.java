@@ -29,6 +29,8 @@ public class JavaLCS {
 			{
 				if(str1.charAt(i) == str2.charAt(j))
 					D[i][j] = D[i-1][j-1] + 1;
+				else
+					D[i][j] = max(D[i-1][j],D[i][j-1]);
 			}
 		}
 		
