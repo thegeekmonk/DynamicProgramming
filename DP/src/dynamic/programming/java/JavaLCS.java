@@ -27,7 +27,10 @@ public class JavaLCS {
 			for(int j = 0;j < 10;j++)
 			{
 				if(str1.charAt(i) == str2.charAt(j))
-					D[i][j] = D[i-1][j-1] + 1;
+					if(i == 0 || j == 0)
+						D[i][j] = 0;
+					else
+					    D[i][j] = D[i-1][j-1] + 1;
 				else
 				{   
 					if(i == 0 || j == 0)
