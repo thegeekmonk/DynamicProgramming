@@ -30,6 +30,7 @@ public class JavaLCS {
 //		if(str1.charAt(0) == str2.charAt(0))
 //			   D[0][0] =  1;	
 		
+		//D[i][j] : LCS of strings having length as i and j respectively  
 		
 		for(int i = 1;i <= len1;i++)
 		{
@@ -37,7 +38,7 @@ public class JavaLCS {
 			{
 				if(str1.charAt(i-1) == str2.charAt(j-1))
 				{	
-					   D[i][j] = D[i-1][j-1] + 1;
+					D[i][j] = D[i-1][j-1] + 1;
 				}	
 				else
 				{   
