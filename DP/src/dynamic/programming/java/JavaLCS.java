@@ -19,11 +19,11 @@ public class JavaLCS {
 		int len2 = str2.length();
 		
 		//solving the base case
-		for(int i = 0;i <= len1;i++)
+		for(int i = 0;i < len1;i++)
 			D[i][0] = 0;
 		
 		//solving the base case
-		for(int j = 0;j <= len2;j++)
+		for(int j = 0;j < len2;j++)
 			D[j][0] = 0;
 		
 		for(int i = 1;i < len1;i++)
