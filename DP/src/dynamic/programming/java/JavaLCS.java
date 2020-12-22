@@ -46,7 +46,7 @@ public class JavaLCS {
 			}
 		}
 		
-		return D[len1-1][len2-1];
+		return D[len1][len2];
 	}
 	
 	
