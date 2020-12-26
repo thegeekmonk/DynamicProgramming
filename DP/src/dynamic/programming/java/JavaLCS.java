@@ -13,7 +13,7 @@ public class JavaLCS {
 	public static int lcs(String str1,String str2)
 	{
 		//int num = 0; 		
-		int D[][] = new int[10][10];
+		int D[][] = new int[10][10];  //Memoization
 		
 		int len1 = str1.length();
 		int len2 = str2.length();
