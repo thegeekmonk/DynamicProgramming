@@ -6,7 +6,7 @@ public class MakeStringPalindrome {
 	
 	public int insertMinCharToPalindrome(String str)
 	{   
-		
+		int len = str.length();
 		
 		
 		
