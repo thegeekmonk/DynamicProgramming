@@ -25,12 +25,12 @@ public class MakeStringPalindrome {
 		// search for 2nd half of string in Hashmap
 		if (len % 2 == 0)
 			for (int i = mid; i < len; i++) {
-				if(hm.containsKey(str.charAt(i)))
+				if(!hm.containsKey(str.charAt(i)))
 					count++;
 			}
 		else
 			for (int j = mid+1; j < len; j++) {				
-				if(hm.containsKey(str.charAt(j)))
+				if(!hm.containsKey(str.charAt(j)))
 					count++;
 			}
 
@@ -42,7 +42,7 @@ public class MakeStringPalindrome {
 		 //String str = "ab3db";
 		  String str = "ab3pq"; 
 				
-		 System.out.println("Minm Character Required : "+insertMinCharToPalindrome(str));
+		 System.out.println("Min Character Required : "+insertMinCharToPalindrome(str));
 		 
 	}
 
