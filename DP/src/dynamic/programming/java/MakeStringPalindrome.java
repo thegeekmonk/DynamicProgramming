@@ -4,12 +4,12 @@ import java.util.HashMap;
 
 public class MakeStringPalindrome {
 
-	private int count = 0;
-
-	public int insertMinCharToPalindrome(String str) {
+	public static int insertMinCharToPalindrome(String str) {
 		int len = str.length();
 		int mid = len / 2;
-
+        
+		int count = 0;
+		
 		HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
 
 		// store first half of string into Hashmap
@@ -23,7 +23,6 @@ public class MakeStringPalindrome {
 			}
 
 		// search for 2nd half of string in Hashmap
-
 		if (len % 2 == 0)
 			for (int i = mid; i < len; i++) {
 				if(hm.containsKey(str.charAt(i)))
@@ -35,12 +34,16 @@ public class MakeStringPalindrome {
 					count++;
 			}
 
-		return count;
+		return 2*count;
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+           
+		 String str = "abda";
+		 
+		 System.out.println("Minm Character Required : "+insertMinCharToPalindrome(str));
+		 
 	}
 
 }
