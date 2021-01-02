@@ -38,10 +38,10 @@ public class MakeStringPalindrome {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-           
-		 String str = "abda";
-		 
+		// TODO Auto-generated method stub         
+		 //String str = "ab3db";
+		  String str = "ab3pq"; 
+				
 		 System.out.println("Minm Character Required : "+insertMinCharToPalindrome(str));
 		 
 	}
